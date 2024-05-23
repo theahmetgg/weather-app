@@ -1,6 +1,7 @@
 import AirPollution from "./Components/AirPollution/AirPollution";
 import Navbar from "./Components/Navbar";
 import SunSet from "./Components/SunSet/SunSet";
+import Wind from "./Components/Wind/Wind";
 import Temperature from "./Components/Temperature/Temperature";
 export const metadata = {
   title: "Weather App",
@@ -18,6 +19,7 @@ export default function Home() {
           <div className="instruments grid h-full gap-4 col-span-full sm-2:col-span-2 lg:grid-cols-3 xl:grid-cols-4">
             <AirPollution />
             <SunSet />
+            <Wind />
           </div>
         </div>
       </div>
