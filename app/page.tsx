@@ -3,6 +3,7 @@ import Navbar from "./Components/Navbar";
 import SunSet from "./Components/SunSet/SunSet";
 import Wind from "./Components/Wind/Wind";
 import Temperature from "./Components/Temperature/Temperature";
+import DailyForecast from "./Components/DailyForecast/DailyForecast";
 export const metadata = {
   title: "Weather App",
   description: "So Cool",
@@ -20,6 +21,7 @@ export default function Home() {
             <AirPollution />
             <SunSet />
             <Wind />
+            <DailyForecast />
           </div>
         </div>
       </div>
