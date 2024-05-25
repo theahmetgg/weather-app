@@ -25,8 +25,6 @@ export const formatNumber = (num: number) => {
   }
 };
 
-
-
 export const airQualityIndexText = [
   {
     rating: 10,

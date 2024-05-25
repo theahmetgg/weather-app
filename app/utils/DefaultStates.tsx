@@ -1,10 +1,10 @@
 const defaultStates = [
   {
-    name: "Madrid",
-    country: "ES",
-    state: "Madrid",
-    lat: 40.4165,
-    lon: -3.7026,
+    name: "Istanbul",
+    country: "TR",
+    state: "Istanbul",
+    lat: 41.0351,
+    lon: 28.9833,
   },
   {
     name: "London",
