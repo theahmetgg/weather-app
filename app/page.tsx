@@ -8,6 +8,7 @@ import UvIndex from "./Components/UvIndex/UvIndex";
 import Population from "./Components/Population/Population";
 import FellsLike from "./Components/FeelsLike/FeelsLike";
 import Humidity from "./Components/Humidity/Humidity";
+import Visibility from "./Components/Visibility/Visibility";
 export const metadata = {
   title: "Weather App",
   description: "So Cool",
@@ -30,6 +31,7 @@ export default function Home() {
             <Population />
             <FellsLike />
             <Humidity />
+            <Visibility />
           </div>
         </div>
       </div>
