@@ -1,8 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+To get started with the project, follow these steps:
+
+1. Clone the repository:
+    ```
+    git clone https://github.com/your-username/your-project.git
+    ```
+
+2. Create a `.env` file in the root directory of the project.
+
+3. Get an API key from [OpenWeatherMap](https://openweathermap.org/current).
+
+4. Paste your API key into the `.env` file in the following format:
+    ```
+    OPENWEATHERMAP_API_KEY=*********
+    ```
+    
+second, run the development server:
 
 ```bash
 npm run dev
