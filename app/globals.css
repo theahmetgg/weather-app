@@ -104,7 +104,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .temperature {
-  background-image: linear-gradient(to right, #00dfff 0%, #00f9ff 20%, yellow);
+  background-image: linear-gradient(to right, #00dfff 0%, #00f9ff 20%,rgba(180,96,231,1),rgba(178,34,34,1),orange,yellow);
 }
 
 .footer-text>img {

@@ -18,7 +18,7 @@ function FiveDayForecast() {
     dailyData: {
       main: { temp_min: number; temp_max: number };
       dt: number;
-    }[]
+    }[],
   ) => {
     let minTemp = Number.MAX_VALUE;
     let maxTemp = Number.MIN_VALUE;
@@ -31,7 +31,7 @@ function FiveDayForecast() {
         if (day.main.temp_max > maxTemp) {
           maxTemp = day.main.temp_max;
         }
-      }
+      },
     );
 
     return {
