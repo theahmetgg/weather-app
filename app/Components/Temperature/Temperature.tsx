@@ -1,5 +1,5 @@
 "use client";
-
+import React, { useEffect, useState } from "react";
 import { useGlobalContext } from "@/app/context/globalContext";
 import {
   clearSky,
@@ -11,10 +11,10 @@ import {
 } from "@/app/utils/Icons";
 import { kelvinToCelsius } from "@/app/utils/misc";
 import moment from "moment";
-import React, { useEffect, useState } from "react";
 
 function Temperature() {
   const { forecast } = useGlobalContext();
+
   const { main, timezone, name, weather } = forecast;
 
   if (!forecast || !weather) {
@@ -25,7 +25,7 @@ function Temperature() {
   const minTemp = kelvinToCelsius(main?.temp_min);
   const maxTemp = kelvinToCelsius(main?.temp_max);
 
-  //State
+  // State
   const [localTime, setLocalTime] = useState<string>("");
   const [currentDay, setCurrentDay] = useState<string>("");
 
@@ -48,25 +48,28 @@ function Temperature() {
     }
   };
 
-  //Live Time Update
+  // Live time update
   useEffect(() => {
-    //update time every second
+    // upadte time every second
     const interval = setInterval(() => {
       const localMoment = moment().utcOffset(timezone / 60);
-      //custom format:24 hour format
+      // custom format: 24 hour format
       const formatedTime = localMoment.format("HH:mm:ss");
-      //day of the week
+      // day of the week
       const day = localMoment.format("dddd");
 
       setLocalTime(formatedTime);
       setCurrentDay(day);
     }, 1000);
-  }, []);
+
+    // clear interval
+    return () => clearInterval(interval);
+  }, [timezone]);
 
   return (
     <div
       className="pt-6 pb-5 px-4 border rounded-lg flex flex-col 
-    justify-between dark:bg-dark-grey shadow-sm dark:shadow-none"
+        justify-between dark:bg-dark-grey shadow-sm dark:shadow-none"
     >
       <p className="flex justify-between items-center">
         <span className="font-medium">{currentDay}</span>
@@ -77,14 +80,15 @@ function Temperature() {
         <span>{navigation}</span>
       </p>
       <p className="py-10 text-9xl font-bold self-center">{temp}°</p>
+
       <div>
         <div>
           <span>{getIcon()}</span>
           <p className="pt-2 capitalize text-lg font-medium">{description}</p>
         </div>
         <p className="flex items-center gap-2">
-          <span>Low:{minTemp}° </span>
-          <span> High:{maxTemp}°</span>
+          <span>Low: {minTemp}°</span>
+          <span>High: {maxTemp}°</span>
         </p>
       </div>
     </div>
