@@ -1,5 +1,6 @@
-## Getting Started
+![github için](https://github.com/theahmetgg/weather-app/assets/92268751/133da924-9bf4-4aa4-b868-67c226c57315)
 
+## Getting Started
 To get started with the project, follow these steps:
 
 1. Clone the repository:
