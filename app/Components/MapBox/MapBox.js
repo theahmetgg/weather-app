@@ -45,12 +45,13 @@ function Mapbox() {
         zoom={13}
         scrollWheelZoom={false}
         className="rounded-lg m-4"
-        style={{ height: "calc(100% - 2rem)", width: "calc(100% - 2rem)" }}
+        style={{
+          height: "calc(100% - 2rem)",
+          width: "calc(100% - 2rem)",
+          margin: "15px",
+        }}
       >
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        />
+        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
         <FlyToActiveCity activeCityCords={activeCityCords} />
       </MapContainer>

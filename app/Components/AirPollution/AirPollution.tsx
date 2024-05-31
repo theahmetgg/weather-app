@@ -28,16 +28,15 @@ function AirPollution() {
   });
 
   return (
-    <div className="air-pollution col-span-2 sm-2:col-span-2 pt-6 px-4 h-[12rem] border rounded-lg flex flex-col gap-8 dark:bg-grey shadow-sm dark:shadow-none">
+    <div
+      className="air-pollution pt-6 px-4 h-[12rem] border rounded-lg flex flex-col gap-8
+       dark:bg-dark-grey shadow-sm dark:shadow-none col-span-full sm-2:col-span-2 md:col-span-2 xl:col-span-2"
+    >
       <h2 className="flex items-center gap-2 font-medium">
-        {thermo} Air Pollution
+        {thermo}Air Pollusion
       </h2>
-      <Progress
-        value={airQuality.list[0].main.aqi}
-        max={100}
-        className="progress"
-      />
-      <p>Air Quality is {filteredIndex?.description}</p>
+      <Progress value={airQualityIndex} max={100} className="progress" />
+      <p className="text-sm">Air quality is {filteredIndex?.description}. </p>
     </div>
   );
 }

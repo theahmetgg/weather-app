@@ -56,6 +56,7 @@ export const GlobalContextProvider = ({ children }) => {
       const res = await axios.get(`/api/geocoded?search=${search}`);
 
       setGeoCodedList(res.data);
+      
     } catch (error) {
       console.log("Error fetching geocoded list: ", error.message);
     }
