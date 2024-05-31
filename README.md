@@ -1,4 +1,4 @@
-![github için](https://github.com/theahmetgg/weather-app/assets/92268751/133da924-9bf4-4aa4-b868-67c226c57315)
+![ahmetgulmez com tr](https://github.com/theahmetgg/weather-app/assets/92268751/a5773168-af11-4693-971c-675f50b651b0)
 
 ## Getting Started
 To get started with the project, follow these steps:
