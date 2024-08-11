@@ -5,7 +5,7 @@ To get started with the project, follow these steps:
 
 1. Clone the repository:
     ```
-    git clone https://github.com/your-username/your-project.git
+    git clone https://github.com/theahmetgg/weather-app
     ```
 
 2. Create a `.env` file in the root directory of the project.
